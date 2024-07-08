@@ -1,0 +1,259 @@
+/* Estilo global para todos os elementos */
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS para cores */
+:root {
+    --main-color: #FF6347;
+    --main-text-color: #fff;
+    --border-color: #FF6347;
+    --bio-bg-color: #494E5F;
+    --bio-border-color: #D4D4D4;
+    --about-bg-color: #292D3C;
+}
+
+/* Classe para destacar texto */
+.highlight {
+    color: var(--main-color);
+}
+
+/* Estilo para o container principal */
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+/* Estilo para o container da biografia */
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+/* Estilo para o container sobre */
+#about-container {
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: var(--about-bg-color);
+    padding: 50px;
+}
+
+/* Estilo para a imagem da biografia */
+#bio-image {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 25px;
+}
+
+/* Estilo para o título da biografia */
+#bio-container h2 {
+    margin-bottom: 25px;
+}
+
+/* Estilo para os parágrafos da biografia */
+#bio-container p {
+    margin-bottom: 20px;
+}
+
+/* Estilo para o container das redes sociais */
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+/* Estilo para o texto de boas-vindas */
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+/* Estilo para os itens da lista de redes sociais */
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+/* Estilo para os links das redes sociais */
+#social-container li a {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+/* Estilo para o container de email */
+#email-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para os links de email */
+#email-container a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    max-width: 225px;
+}
+
+/* Estilo para o ícone de email */
+#email-container ion-icon {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
+}
+
+/* Estilo para o nome no container sobre */
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o título no container sobre */
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo para a descrição no container sobre */
+.description {
+    max-width: 75%;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão de projetos */
+#btn-projects {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+}
+
+/* Estilo para o ícone e texto do botão de projetos */
+#btn-projects ion-icon,
+#btn-projects span {
+    flex: 1 1 0;
+}
+
+/* Estilo para o ícone do botão de projetos */
+#btn-projects ion-icon {
+    font-size: 20px;
+    max-width: 20px;
+}
+
+/* Efeito de hover para o botão de projetos */
+#btn-projects:hover {
+    background-color: transparent;
+}
+
+/* Estilo para o título da seção de habilidades */
+#skills-section-title {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Estilo para o container de habilidades */
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* Estilo para os boxes de habilidades */
+.skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+/* Estilo para os títulos das habilidades */
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--main-color);
+}
+
+/* Estilo para os ícones das habilidades */
+.skills-box i {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+/* Estilos responsivos para telas menores */
+@media(max-width: 450px) {
+    /* Ajuste da direção do container principal */
+    #container {
+        flex-direction: column;
+    }
+
+    /* Ajuste da altura mínima e borda do container de biografia */
+    #bio-container {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+    }
+
+    /* Esconde o título da biografia em telas menores */
+    #bio-container h2 {
+        display: none;
+    }
+
+    /* Ajuste de largura e margens dos parágrafos da biografia */
+    #bio-container p {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    /* Ajuste de alinhamento e padding do container sobre */
+    #about-container {
+        text-align: center;
+        padding: 30px;
+    }
+
+    /* Ajuste de margens e largura da descrição no container sobre */
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    /* Ajuste de margens do botão de projetos */
+    #btn-projects {
+        margin: 20px auto;
+    }
+
+    /* Ajuste da largura dos boxes de habilidades */
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    /* Ajuste do tamanho dos ícones das habilidades */
+    .skills-box i {
+        font-size: 60px;
+    }
+}
